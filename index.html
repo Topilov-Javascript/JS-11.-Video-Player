@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Video Player</title>
-    <link rel="icon" type="image/png" href="./images/favicon.ico">
+    <link rel="icon" type="image/ico" href="./images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
 
-    <!-- Car Racing (1080P)-->
-    <!-- https://pixabay.com/videos/download/video-41758_source.mp4?attachment -->
-    <!-- Lake (4K) -->
-    <!-- https://pixabay.com/videos/download/video-28745_source.mp4?attachment -->
-    <!-- Ocean (720P)-->
-    <!-- https://pixabay.com/videos/download/video-31377_tiny.mp4?attachment -->
+    <!-- Loader -->
+    <div class="loader">
+        <img src="./images/Spinner-0.5s-200px.svg" alt="loading">
+    </div>
+
+    <!-- Content -->
     <div class="player">
-        <video src="https://pixabay.com/videos/download/video-31377_tiny.mp4?attachment" class="video"
+        <!-- Video -->
+        <video src="https://pixabay.com/videos/download/video-41758_source.mp4?attachment" class="video"
             playsinline></video>
         <!-- Show Controls -->
         <div class="show-controls" id="show-controls">
@@ -33,7 +34,7 @@
                     <div class="controls-left">
                         <!-- Play?/Pause -->
                         <div class="play-controls">
-                            <i class="fas fa-play" title="Play" id="play-button"></i>
+                            <i class="fas fa-play" title="Play" id="play-btn"></i>
                         </div>
                         <!-- Volume -->
                         <div class="volume">
