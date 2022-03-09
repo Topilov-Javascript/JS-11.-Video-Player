@@ -203,6 +203,13 @@ function setDuration(e) {
   duration.textContent = `/ ${displayTime(video.duration)}`;
 }
 
+// Fires when error detected during loading the video
+function errorDetected(e) {
+  loader.textContent = 'An error has occured during loading the video. Please retry later!';
+  loader.style.alignItems = 'center'
+  loader.style.padding = '0 10%'
+}
+
 let fullscreen = false;
 // Toggle Fullscreen
 function toggleFullscreen() {
@@ -216,6 +223,7 @@ playBtn.addEventListener('click', togglePlay)
 video.addEventListener('click', togglePlay)
 document.addEventListener('keypress', (e)=>{e.charCode===32?togglePlay():false})
 video.addEventListener('loadedmetadata', setDuration)
+video.addEventListener('error', errorDetected)
 video.addEventListener('timeupdate', updateProgress)
 video.addEventListener('canplay', updateProgress)
 progressRange.addEventListener('click', setProgress)

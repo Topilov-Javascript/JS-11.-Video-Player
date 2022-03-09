@@ -27,6 +27,10 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 0.856);
 }
 
 .loader img {
